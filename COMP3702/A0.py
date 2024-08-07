@@ -8,36 +8,41 @@ Answer each question in the corresponding method definition stub below
 """
 
 
-def Q1(A,B):
+def Q1(A, B):
     union = A | B
     intersection = A & B
-    return union,intersection
-
-print(Q1({1,2,3,4,5},{3,4,5,6,7}))
-
-def Q2(A,B):
-    return 'DISJOINT'
+    return union, intersection
 
 
-def Q3(a,b):
+print(Q1({1, 2, 3, 4, 5}, {3, 4, 5, 6, 7}))
+
+
+def Q2(A, B):
+    if A & B is not None:
+        return "Intersecting"
+    else:
+        return "DISJOINT"
+
+
+print(Q2({1, 2, 3, 4, 5}, {3, 4, 5, 6, 7}))
+
+
+def Q3(a, b):
     X = set()
     Y = set()
     G = set()
-    return X,Y,G
+    return X, Y, G
 
 
-def Q4(E,n):
+def Q4(E, n):
     n_successors = set()
     return n_successors
 
 
-def Q5(inFile,outFile,remove):
-    print('Character '+remove+' removed from '+inFile)
-    print('Output written to '+outFile)
+def Q5(inFile, outFile, remove):
+    print("Character " + remove + " removed from " + inFile)
+    print("Output written to " + outFile)
 
 
-def Q6(state1,state2):
-    print('IMPOSSIBLE')
-
-
-    
+def Q6(state1, state2):
+    print("IMPOSSIBLE")
